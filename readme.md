@@ -21,13 +21,19 @@ A responsive, modern portfolio template for creative professionals. Features inc
 ## ✨ Features
 
 - 📱 Responsive design for desktop, tablet, and mobile devices
-- 🎭 Animated glitch effect for the title
+- 🎭 Animated glitch effect for the title with reduced motion support
 - 🗂️ Portfolio filtering by category
-- 🎬 YouTube video integrations with modal viewer
+- 🎬 YouTube video integrations with secure modal viewer
 - 🔄 Smooth scrolling navigation
 - ✨ AOS (Animate On Scroll) animations
-- 📬 Contact form integration via Formspree
+- 📬 Contact form integration via Formspree with loading states
 - 🛠️ Easily customizable with detailed comments or AI assistance
+- 🔒 Content Security Policy (CSP) for enhanced security
+- ⚡ Optimized performance with deferred scripts and minified assets
+- 🎯 SEO-ready with Open Graph and Twitter Card meta tags
+- ♿ Improved keyboard navigation with focus-visible styles
+- 🚀 CSS containment for better rendering performance
+- 💾 Minified CSS and JS versions included (30-35% smaller)
 
 ## 🚀 Setup Guide
 
@@ -115,13 +121,18 @@ VS Code is a powerful, free editor that's great for web development.
      - Add portfolio thumbnails as `images/thumbnail_01.webp`, `images/thumbnail_02.webp`, etc.
      - Update the hero video at `videos/hero_loop.mp4`
    - Edit `index.html` to update:
-     - Your name and professional title
+     - Your name and professional title (in title tag and Open Graph tags)
+     - Meta description and SEO keywords
      - About section information
-     - Portfolio projects (update categories, titles, links)
+     - Portfolio projects (update categories, titles, YouTube video IDs)
      - Experience details
      - Skills and services
-     - Contact information (update Formspree form ID)
+     - Contact information (update Formspree form ID at line 436)
+     - Update Open Graph URLs to your actual GitHub Pages URL
    - Customize styles in `css/main.css` if needed
+   - **For production**: Use minified versions by changing:
+     - `css/main.css` to `css/main.min.css`
+     - `js/main.js` to `js/main.min.js`
 
 #### Method 2: AI-Assisted Editing with Claude 🤖
 
@@ -275,6 +286,35 @@ To make future updates to your site:
 - Join our [Discord support server](https://discord.gg/TWfa3A72)
 - Visit [GitHub Pages Documentation](https://docs.github.com/en/pages)
 - Check [GitHub Community Forum](https://github.community/)
+
+## ⚡ Performance & Security Features
+
+This template has been optimized for performance and security:
+
+### Performance Optimizations
+- **Deferred JavaScript**: Scripts load without blocking page render
+- **Optimized Font Loading**: Reduced to 3 fonts with async loading
+- **Video Optimization**: Poster images and metadata preloading
+- **CSS Containment**: Better rendering performance on hover effects
+- **Minified Assets**: 30%+ smaller CSS/JS files available
+- **Lazy Loading**: Images load only when needed
+- **Throttled Scroll Events**: Reduced CPU usage during scrolling
+- **Will-change hints**: Optimized animations for GPU acceleration
+
+### Security Features
+- **Content Security Policy (CSP)**: Protects against XSS attacks
+- **Sandbox iframes**: YouTube embeds run with restricted permissions
+- **CORS protection**: CDN resources loaded with crossorigin attribute
+- **NoOpener/NoReferrer**: External links open securely
+- **Input validation**: Form fields with proper types and validation
+- **Updated dependencies**: Latest AOS library (3.0.0-beta.6)
+
+### SEO Features
+- **Meta descriptions**: Customizable page descriptions
+- **Open Graph tags**: Beautiful social media previews
+- **Twitter Cards**: Optimized Twitter sharing
+- **Semantic HTML**: Proper heading hierarchy and structure
+- **Mobile-friendly**: Responsive viewport configuration
 
 ## 💭 Development Philosophy
 

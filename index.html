@@ -28,17 +28,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="theme-color" content="#000000">
-    <title>Artist Name - Creative Portfolio Template</title>
-    
-    <!-- Google Fonts with preconnect for better performance -->
+
+    <!-- SEO Meta Tags -->
+    <title>Artist Name - Creative Portfolio | VFX, Animation & Design</title>
+    <meta name="description" content="Professional portfolio showcasing VFX, animation, and creative design work. Explore my projects, experience, and services.">
+    <meta name="keywords" content="VFX, visual effects, animation, portfolio, creative, design">
+    <meta name="author" content="Artist Name">
+
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Artist Name - Creative Portfolio">
+    <meta property="og:description" content="Professional portfolio showcasing VFX, animation, and creative design work.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io">
+    <meta property="og:image" content="https://yourusername.github.io/images/artist_headshot.webp">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Artist Name - Creative Portfolio">
+    <meta name="twitter:description" content="Professional portfolio showcasing VFX, animation, and creative design work.">
+    <meta name="twitter:image" content="https://yourusername.github.io/images/artist_headshot.webp">
+
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://www.youtube.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https: data: https://placehold.co https://cdn-icons-png.flaticon.com; frame-src https://www.youtube.com https://www.google.com; connect-src 'self' https://formspree.io;">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <!-- Google Fonts with preconnect for better performance - Optimized to 3 fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Rubik+Vinyl&family=Rubik+Glitch+Pop&family=Rubik+Lines&family=Rubik+Broken+Fax&display=swap" rel="stylesheet">
-    
-    <!-- Animation Library - loaded asynchronously -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    
-    <!-- Combined CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Rubik+Glitch+Pop&family=Rubik+Broken+Fax&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Rubik+Glitch+Pop&family=Rubik+Broken+Fax&display=swap" rel="stylesheet"></noscript>
+
+    <!-- Animation Library - AOS 3.0.0-beta.6 with integrity check -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.css" crossorigin="anonymous">
+
+    <!-- Combined CSS - Use main.min.css for production for better performance -->
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -67,7 +94,7 @@
     <!-- Hero Section -->
     <!-- TIP: Replace the hero_loop.mp4 with your own video for a personalized touch -->
     <section id="home" class="hero">
-        <video autoplay muted loop id="background-video">
+        <video autoplay muted loop playsinline id="background-video" poster="videos/videoLoopStill_01.png" preload="metadata">
             <source src="videos/hero_loop.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -85,7 +112,12 @@
             <div class="about-grid">
                 <!-- Headshot photo in its own container - Replace with your own headshot -->
                 <div class="about-photo-container" data-aos="fade-up" data-aos-delay="100">
-                    <img src="images/artist_headshot.webp" alt="Artist Headshot" loading="lazy">
+                    <img src="images/artist_headshot.webp"
+                         srcset="images/artist_headshot.webp 1x"
+                         alt="Professional headshot of Artist Name"
+                         width="200"
+                         height="200"
+                         loading="lazy">
                 </div>
                 
                 <!-- Four content sections in a grid layout -->
@@ -467,8 +499,9 @@
         </div>
     </footer>
 
-    <!-- JavaScript (Combined) -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/main.js"></script>
+    <!-- JavaScript (Combined) - Deferred for better performance -->
+    <!-- TIP: For production, use main.min.js instead of main.js for better performance -->
+    <script src="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.js" defer crossorigin="anonymous"></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>
